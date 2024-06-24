@@ -75,7 +75,7 @@ public class TelegramBotUpdatesListener implements UpdatesListener{
                 .findByChatIdAndNotificationDateAndNotificationMessage(notificationTask.getChatId()
                         ,notificationTask.getNotificationDate()
                         ,notificationTask.getNotificationMessage());
-        logger.info("Was invoked method for create notification task");
+        logger.info("Был вызван метод для создания задачи уведомления");
         if (notificationList.isEmpty()) {
             notificationTaskRepository.save(notificationTask);
             return "Напоминание успешно добавлено";
